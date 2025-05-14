@@ -1,0 +1,285 @@
+@import url("reset.css");
+@import url(https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900|Roboto:100,700,900);
+
+.cf::before,
+.cf::after {
+	content: "";
+	display: table;
+}
+
+.cf::after {
+	clear: both;
+}
+
+.fl-l {
+	float: left;
+}
+
+.fl-r {
+	float: right;
+}
+
+.col1 {width: 57px;}
+.col2 {width: 150px;}
+.col3 {width: 243px;}
+.col4 {width: 336px;}
+.col5 {width: 429px;}
+.col6 {width: 522px;}
+.col7 {width: 615px;}
+.col8 {width: 708px;}
+.col9 {width: 801px;}
+.col10 {width: 894px;}
+.col11 {width: 987px;}
+.col12 {width: 1080px;}
+
+.left3col {margin-left: 243px;}
+.left2col {margin-left: 150px;}
+.left1col {margin-left: 57px;}
+.right1col {margin-right: 57px;}
+.right2col {margin-right: 150px;}
+
+html {
+	font-size: 1.25em;
+	background: url(img/blue-flow.svg) no-repeat top center #F5F5F5;
+}
+
+header {
+	background: #fff;
+	margin: 150px 0;
+}
+
+
+/* TITLE STYLES */
+
+.title--lv1 {
+	font: 100 10.498em "Roboto", sans-serif;
+	text-align: center;
+	padding-top: 30px;
+	margin-bottom: 30px;
+}
+
+.subtitles {
+	margin: 0 auto;
+}
+
+.title--lv2 {
+	font: 900 1.8em "Lato", sans-serif;
+	text-align: center;
+	color: #37B7EC;
+	margin-bottom: 30px;
+}
+
+.title--author {
+	font: 300 1.8em "Lato", sans-serif;
+	padding-bottom: 0px;
+	text-align: right;
+}
+
+.title--date {
+	font: 100 1em "Lato", sans-serif;
+	text-align: right;
+	padding-bottom: 30px;
+}
+
+.title--lv3 {
+	font: 900 3.24em "Roboto", sans-serif;
+	margin-bottom: 75px;
+}
+
+
+/* TEXT STYLES */
+
+.text {
+	font: 300 1em/180% "Lato", sans-serif;
+	padding: 36px 36px 0;
+	background: #fff;
+}
+
+.text:last-child {
+	padding-bottom: 36px;
+}
+
+.text--intro,
+.text--conclusion,
+.text--aside {
+	font-weight: 700;
+	padding: 36px;
+	margin: 0 auto;
+}
+
+.textbox--conclusion {
+	background: #fff;
+	display: inline-block;
+}
+
+.other-projects__el {
+	font: 300 1em/180% "Lato", sans-serif;
+	padding: 0 36px 18px;
+}
+
+.other-projects__el:last-child {
+	padding-bottom: 36px;
+}
+
+small {
+	font: 700 0.7em "Roboto", sans-serif;
+	text-align: center;
+	background: #fff;
+	padding: 30px 0;
+	display: block;
+	width: 100%;
+}
+
+
+/* LINK STYLES */
+
+.link {
+	color: #37b7ec;
+	text-decoration: none;
+	position: relative;
+}
+
+.link:hover,
+.link:focus {
+	opacity: .7;
+	-webkit-transition: all .1s ease-out;
+	        transition: all .1s ease-out;
+}
+
+.link:after {
+	display: block;
+	content: '';
+	height: 2px;
+	width: 0%;
+	background: #37b7ec;
+	opacity: .7;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	-webkit-transition: all .1s ease-out;
+	        transition: all .1s ease-out;
+}
+
+.link:hover:after,
+.link:focus:after {
+	width: 100%;
+}
+
+.button__container {
+	position: relative;
+	overflow: hidden;
+	display: block;
+	height: 61px;
+	width: 526px;
+	margin: 0 auto;
+	text-align: center;
+	border-radius: 50px;
+	z-index: 20;
+}
+
+.button__link {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 57px;
+	color: #fff;
+	border: 2px solid #37b7ec;
+	border-radius: 50px;
+	font: 100 1.8em/160% "Lato", sans-serif;
+	text-decoration: none;
+	text-align: center;
+	z-index: 20;
+	-webkit-transition: color .1s ease-out;
+	        transition: color .1s ease-out;
+}
+
+.button__container:hover .button__link,
+.button__container:focus .button__link {
+	color: #37b7ec;
+}
+
+.button__container:before {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: #37b7ec;
+	-webkit-transition: top .1s ease-out;
+	        transition: top .1s ease-out;
+	z-index: 10;
+}
+
+.button__container:hover:before,
+.button__container:focus:before {
+	top: 100%;
+}
+
+
+/* PAGE LAYOUT */
+
+main {
+	margin: 0 auto;
+}
+
+.section {
+	margin-bottom: 150px;
+}
+
+.step {
+	margin: 75px auto;
+}
+
+.step--classic {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+}
+
+aside {
+	background: #fff;
+}
+
+.other-projects {
+	margin: 0 auto;
+}
+
+footer {
+	margin: 100px 0;
+}
+
+
+/* SCREENSHOTS DISPLAY */
+
+.screenshot {
+	box-shadow: 0 0 10px 0 rgba(0, 0, 0, .35);
+	z-index: 100;
+}
+
+.imgContainer {
+	background: #fff;
+}
+
+.step--hamburger1 .imgContainer {
+	height: 597px;
+}
+
+.step--pisa .imgContainer,
+.step--hamburger2 .imgContainer {
+	height: 432px;
+}
+
+.imgContainer .screenshot {
+	margin-right: 36px;
+}
+
+.imgContainer .screenshot:last-child {
+	margin-right: 0;
+}
