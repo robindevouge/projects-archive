@@ -1,0 +1,453 @@
+/*#f34235*/
+
+*:focus {
+	outline: none;
+}
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	font-family: "Lato", sans-serif;
+	background-color: #fdfdfd;
+	color: #212121
+}
+
+
+/* important is for preventing these elements to be colored */
+
+.clear:focus,
+.fill:focus {
+	outline: 0;
+}
+
+#color,
+.cell,
+.button {
+	/* preventing an odd bug on cells and user from selecting buttons*/
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+
+/* HEADER */
+
+header {
+	position: fixed;
+	top: 0;
+	height: 75px;
+	width: 100%;
+	background-color: #D32F2F !important;
+	z-index: 200;
+}
+
+.menu {
+	float: left;
+}
+
+.title {
+	text-align: center;
+	font-size: 40px;
+	font-weight: 100;
+	color: #fdfdfd;
+	padding-top: 10px;
+}
+
+header p {
+	position: absolute;
+	bottom: 5px;
+	right: 5px;
+	color: #fdfdfd;
+	font-weight: 200;
+	background: rgba(0,0,0,0) !important;
+}
+
+header p a {
+	color: #fdfdfd;
+	border-bottom: 1px dotted #fdfdfd;
+	background: rgba(0,0,0,0) !important;
+}
+
+header p a:hover {
+	color: #FFCDD2;
+	border-bottom: 1px dotted #FFCDD2;
+}
+
+.presets,
+.prompt-new {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, .8) !important;
+	z-index: -100;
+	opacity: 0;
+	transition: z-index .2s linear, opacity .2s linear;
+}
+
+.presets-container,
+.prompt-new-container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 400px;
+	padding: 25px;
+	border-radius: 5px;
+	background-color: #fdfdfd !important;
+	transform: translate(-50%, -50%);
+	font-family: "Lato", sans-serif;
+	font-weight: 400;
+}
+
+.prompt-new-buttons-container {
+	width: 90px;
+	margin: 0 auto;
+}
+
+.prompt-new-yes,
+.prompt-new-no {
+	font-size: 1.2em;
+	font-family: "Lato", sans-serif;
+	font-weight: 300;
+}
+
+.prompt-validation {
+	margin: 0 auto;
+	position: relative;
+	top: -60px;
+	left: -200px;
+	transition: left .2s ease-in;
+	width: 90%;
+	height: 50px;
+	border-radius: 5px;
+	background-color: #fdfdfd !important;
+/*	background-color: rgba(0,0,0,.7);*/
+	font-family: "Lato", sans-serif;
+	font-weight: 400;
+	text-align: center;
+}
+
+.prompt-yes,
+.prompt-no {
+	margin-top: 5px;
+	padding: 0 5px;
+	border-radius: 3px;
+	background-color: #fdfdfd !important;
+}
+.prompt-yes {
+	margin-right: 5px;
+}
+
+.prompt-yes:hover,
+.prompt-no:hover {
+	color: #f34235;
+}
+
+.grid-size {
+	width: 310px;
+	margin: 20px auto 0px auto;
+	position: relative;
+}
+
+.grid-size input {
+	margin: 10px;
+}
+
+.grid-size label,
+.grid-size-output {
+	position: relative;
+	top: -3px;
+}
+
+
+
+.presets h2, .prompt-new h2 {
+	text-align: center;
+	font-weight: 300;
+}
+
+.prompt-new h2 {
+	margin-bottom: 25px;
+}
+
+.cta {
+	display: block;
+	margin: 10px auto;
+	padding: 5px 10px;
+	background-color: #f34235 !important;
+	border-radius: 3px;
+	color: #fdfdfd;
+}
+
+.generate {
+	margin-bottom: 35px;
+}
+
+.load-new {
+	margin-top: 25px;
+}
+
+/*
+input[type="range"]:before {
+    content: attr(min);
+	position: relative;
+	top: 1em;
+}
+input[type="range"]:after {
+    content: attr(max);
+	position: relative;
+	top: 1em;
+}
+input[type="range"]:after:after {
+    content: attr(max);
+	position: relative;
+	top: 2em;
+}
+*/
+
+
+/* buttons */
+
+.open-toolbox {
+	position: absolute;
+	left: 130px;
+	top: 50%;
+	padding: 0;
+	width: 25px;
+	height: 50px;
+	background-color: #f44336 !important;
+	text-indent: -1000px;
+	border: none;
+	border-radius: 0 5px 5px 0;
+	z-index: 300;
+	transform: translateY(-50%);
+}
+
+.open-toolbox__img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 20px;
+	height: 50px;
+	background: rgba(0,0,0,0) !important;
+	transform-origin: center;
+	transition: transform .2s ease-out;
+}
+
+.roto {
+	transform: rotate(180deg);
+	transition: transform .2s ease-in;
+}
+
+.toolbox {
+	position: relative;
+	width: 130px;
+	height: calc(100% - 75px);
+	position: fixed;
+	top: 75px;
+	left: -130px;
+	background-color: #F44336 !important;
+	transition: left .2s ease-in;
+	z-index: 50;
+}
+
+.shown {
+	left: 0;
+	transition: left .2s ease-out;
+}
+
+.colpick {
+	z-index: 1000;
+}
+
+.colorPicker {
+	width: 100px;
+	height: 100px;
+	margin: 50px auto 10px auto;
+	cursor: pointer;
+}
+
+.colorPicker__front {
+	background-image: url(../img/palette.svg);
+	width: 100%;
+	height: 100%;
+}
+
+.new-toolbox {
+	display: block;
+	width: 110px;
+	height: 50px;
+	margin: 10px auto;
+	border-radius: 5px;
+	background-color: #f44336 !important;
+	background-image: url(../img/new.svg);
+	text-indent: -1000px;
+	background-size: 110px;
+}
+
+.new-toolbox:hover {background-position: 0 -50px;}
+
+.tool, .save, .load-toolbox {
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+	border: none;
+	padding: 0;
+	text-indent: -1000px;
+	background-color: #f44336 !important;
+	background-image: url(../img/icons.svg);
+	background-size: 500px;
+}
+
+.save:active {background-position: 0 -50px;}
+.save:hover {background-position: 0 -100px;}
+
+.save-confirm {
+	position: absolute;
+	top: 120px;
+	left: 11px;
+	opacity: 0;
+	color: #fdfdfd;
+	font-weight: 200;
+	transition: opacity linear .5s;
+}
+
+.save-anim {
+	opacity: 1;
+	transition: opacity linear .5s;
+}
+
+.load-toolbox {background-position: -50px 0;}
+.load-toolbox:hover {background-position: -50px -100px;}
+.load-toolbox:active {background-position: -50px -50px;}
+
+.brush {background-position: -100px 0;}
+.brush:hover {background-position: -100px -100px;}
+.brush.active {background-position: -100px -50px;}
+
+.eraser {background-position: -150px 0;}
+.eraser:hover {background-position: -150px -100px;}
+.eraser.active {background-position: -150px -50px;}
+
+.size-small {background-position: -200px 0;}
+.size-small:hover {background-position: -200px -100px;}
+.size-small.active {background-position: -200px -50px;}
+
+.size-big {background-position: -250px 0;}
+.size-big:hover {background-position: -250px -100px;}
+.size-big.active {background-position: -250px -50px;}
+
+.zoomout {background-position: -300px 0;}
+.zoomout:hover {background-position: -300px -100px;}
+.zoomout:active {background-position: -300px -50px;}
+
+.zoomin {background-position: -350px 0;}
+.zoomin:hover {background-position: -350px -100px;}
+.zoomin:active {background-position: -350px -50px;}
+
+.fill {background-position: -400px 0;}
+.fill:active {background-position: -400px -50px;}
+.fill:hover {background-position: -400px -100px;}
+
+.clear {background-position: -450px 0;}
+.clear:hover {background-position: -450px -100px;}
+.clear:active {background-position: -450px -50px;}
+
+.help {
+	position: absolute;
+	bottom: 5px;
+	background: rgba(0,0,0,0);
+	font-family: "Lato", sans-serif;
+	font-weight: 300;
+	font-size: 12px;
+	color: #fdfdfd;
+	background: (0,0,0,0) !important;
+}
+
+.help-active {
+	color: #448AFF !important;
+}
+
+.help:hover {
+	color: #FFCDD2;
+}
+
+.visible {
+	left: 0;
+	transition: left .4s ease-out;
+}
+
+/* GRID */
+
+.wrapper {
+	position: absolute;
+	bottom: 0;
+	width: calc(100% - 50px);
+	height: calc(100% - 75px);
+	overflow: auto;
+	margin-left: 0;
+	padding: 0 25px;
+	background-color: #fdfdfd !important;
+	transition: width .2s ease-in, margin .2s ease-in;
+}
+
+.stretched {
+	width: calc(100% - 180px);
+	margin-left: 130px;
+	transition: width .2s ease-out, margin .2s ease-out;
+}
+
+.container {
+	margin: 25px auto;
+	background-color: rgba(0, 0, 0, 0) !important;
+	border: 2px solid #B6B6B6;
+}
+
+.container:hover {
+	cursor: crosshair;
+}
+
+.cell {
+	/*			width: 24px; height: 24px;*/
+	border: 1px solid #B6B6B6;
+}
+
+#dlimg {
+	display: none;
+}
+
+/* TOOLTIPS */
+
+.tooltip {
+    position: absolute;
+    z-index: 1000;
+    left: -9999px;
+    background-color: #fdfdfd;
+    padding: 5px 10px;
+    border: 1px solid #B6B6B6;
+	border-radius: 5px;
+    max-width: 200px;
+}
+
+.tooltip p {
+    margin:0;
+    color:#212121;
+    padding:0;
+}
+
+
+/* ANIMATION CLASSES */
+
+.pop {
+	z-index: 100;
+	opacity: 1;
+	transition: z-index .2s linear, opacity .2s linear;
+}

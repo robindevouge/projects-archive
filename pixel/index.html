@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+	<head>	
+
+		<title>Pixel Art Creator</title>
+		<meta charset="UTF-8" />
+		<meta name="author" content="Robin Devouge">
+		<meta name="description" content="A HTML5 painting app that lets you draw pixel art">
+		<meta name="keywords" content="robin devouge, robindevouge, pixel art, pixelart, pixel art creator">
+		
+		<link rel="stylesheet" href="_assets/css/colpick.css" type="text/css"/>
+		<link rel="stylesheet" type="text/css" href="_assets/css/styles.css">
+		<link href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="_assets/css/normalize.css">
+
+	</head>
+
+	<body>
+		
+		<header>
+			<h1 class="title">Pixel Art Creator</h1>
+			<p>Created by <a href="http://robindevouge.be">Robin Devouge</a></p>
+		</header>
+		
+		<section class="prompt-new">
+			<div class="prompt-new-container">
+				<h2>This will erase your current work !</h2>
+				<h2>Are you sur you want to create a new grid ?</h2>
+				<div class="prompt-new-buttons-container">
+					<button class="prompt-new-yes prompt-yes">Yes</button>
+					<button class="prompt-new-no prompt-no">No</button>
+				</div>
+			</div>
+		</section>
+		
+		<section class="presets pop">
+			<div class="presets-container">
+				<h2>Create a new grid</h2>
+				<div class="grid-size">
+					<label for="grid-size">Number of pixels :</label>
+					<input type="range" value="25" max="100" min="5" step="5" id="grid-size">
+					<span class="grid-size-output"></span>
+				</div>
+				<button class="cta generate">Generate that grid !</button>
+				
+				<h2>Or load the previous one</h2>
+				<button class="cta load load-new">Load</button>
+			</div>
+		</section>
+		
+		<section class="toolbox shown">
+
+			<button class="open-toolbox"><img src="_assets/img/arrow.svg" alt="arrow" class="open-toolbox__img roto"></button>
+			
+			
+			<button class="new new-toolbox" title="New canvas" help="Generate a new grid">New</button>
+			<button class="save" title="Save" help="Save your current drawing. The last save will stay even if you close the tab!">Save</button><button class="load load-toolbox" title="Load" help="Load the last save of your drawing">Load</button>
+			<p class="save-confirm">Saved !</p>
+			
+			<!-- Thanks to @Boblemarin for the idea of color picker -->
+			<div class="colorPicker" title="Choose a color" help='Click to open a color picker, then click on "Deal with it !" to validate'>
+				<div class="colorPicker__front"></div>
+			</div>
+
+			
+			<button class="tool brush active" title="Pencil" help="Pencil tool">pencil</button><button class="tool eraser" title="Eraser" help="Eraser tool">eraser</button><button class="tool size-small active" title="Small" help="Set drawing size to 1 cell">size-small</button><button class="tool size-big" title="Big" help="Set drawing size to 2 cells">size-big</button><button class="tool zoomout" title="Zoom out" help="Zoom out">zoom out</button><button class="tool zoomin" title="Zoom in" help="Zoom in">zoom in</button><button class="tool fill" title="fill all"  help="Fill the whole grid with selected color">Fill all</button><button class="tool clear" title="clear all" help="Reset the whole grid">Clear all</button>
+			<div class="prompt-validation">
+				<p>Sure ?</p>
+				<button class="prompt-yes">Yes</button>
+				<button class="prompt-no">No</button>
+			</div>
+			
+			<button class="help" title="Help and credits" help="All icons are originally made by Google and are under CC-BY licence">What are those icons ?</button>
+			
+			
+			
+
+<!--
+			<a href="#dlfile" id="btn-download" class="button download" title="save image">Save image</a>
+
+-->
+
+		</section> <!--end toolbox-->
+		
+
+
+		<section class="wrapper stretched">
+			<table class="container"></table>
+		</section>
+       
+		<img src="#" id="dlimg" alt="image">	
+        
+        <script src="_assets/js/jquery-2.1.3.min.js"></script>
+        <script src="_assets/js/colpick.js" type="text/javascript"></script>
+        <script src="_assets/js/html2canvas.js"></script>
+		<script src="_assets/js/main.js"></script>
+
+
+	</body>
+
+</html>
