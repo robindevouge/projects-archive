@@ -1,0 +1,38 @@
+:root {
+	/* colors */
+	--color-primary: #37b7ec;
+	--color-white: #fff;
+	--color-bg: #f5F5F5;
+	--color-text: #222;
+
+	/* font families */
+	--ff-lato: 'Lato', sans-serif;
+	--ff-roboto: 'Roboto Variable', sans-serif;
+
+	/* font sizes */
+	--fz-1: clamp(8rem, calc(2.091rem + 15.758vw), 21rem);
+	--fz-2: clamp(3.2rem, calc(1.745rem + 3.879vw), 6.4rem);
+	--fz-3: clamp(2rem, calc(1.273rem + 1.939vw), 3.6rem);
+	--fz-body: clamp(1.6rem, calc(1.509rem + 0.242vw), 1.8rem);
+	--fz-small: 1.6rem;
+	--fz-xsmall: 1.4rem;
+
+	/* font weights */
+	--fw-thin: 100;
+	--fw-book: 200;
+	--fw-extralight: 200;
+	--fw-light: 300;
+	--fw-regular: 400;
+	--fw-medium: 500;
+	--fw-semibold: 600;
+	--fw-bold: 700;
+	--fw-extrabold: 800;
+	--fw-black: 900;
+
+	/* spacings */
+	--max-width: 120rem;
+	--page-margin: clamp(2rem, calc(1.091rem + 2.424vw), 4rem);
+	--section-space: clamp(8rem, calc(4.818rem + 8.485vw), 15rem);
+	--title-space: clamp(4rem, calc(2.409rem + 4.242vw), 7.5rem);
+	--box-padding: clamp(2rem, calc(1.273rem + 1.939vw), 3.6rem);
+}
