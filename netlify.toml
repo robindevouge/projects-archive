@@ -1,0 +1,9 @@
+[[redirects]]
+    from = "/"
+    to = "https://robindevouge.be/"
+    status = 302
+
+[[redirects]]
+    from = "/*"
+    to = "https://robindevouge.be/"
+    status = 302
