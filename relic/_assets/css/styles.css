@@ -1,0 +1,247 @@
+@import url(normalize.css);
+@import url(https://fonts.googleapis.com/css?family=Quicksand:400,700);
+body {
+	font-family: "Quicksand", sans-serif;
+	font-size: 30px;
+	font-weight: 700;
+	color: #555;
+	line-height: 160%;
+	background-color: #f5f5f5;
+}
+
+::selection {
+	background-color: #f5f5f5;
+	color: #f96877;
+}
+
+.splash {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: #f5f5f5;
+	z-index: 100;
+	opacity: 1;
+	transition: all .7s ease-out;
+}
+
+.fadeOut {
+	opacity: 0;
+	z-index: -100;
+}
+
+.title {
+	font-size: 70px;
+	color: #555;
+	padding-bottom: 10px;
+	border-bottom: 7px solid #f96877;
+	display: inline;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+.container {
+	width: 60%;
+	margin: 100px auto 80px auto;
+}
+
+input {
+	display: block;
+	margin: 60px auto 0;
+	border: none;
+	border-bottom: 3px solid #f96877;
+	transition: all 250ms ease-out;
+	text-align: center;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	background-color: #f5f5f5;
+	border-radius: 3px;
+	font-weight: 400;
+}
+
+input:focus {
+	outline: none;
+}
+
+.button_container {
+	margin: 60px auto;
+	display: flex;
+	justify-content: space-around;
+	width: 70%;
+}
+
+button {
+	width: 150px;
+	height: 50px;
+	background: rgba(0,0,0,0);
+	color: #f96877;
+	border: 4px solid #f96877;
+	line-height: 38px;
+	font-weight: 700;
+	position: relative;
+	overflow: hidden;
+	transition: all 200ms ease-out;
+	border-radius: 3px;
+}
+
+button:active {
+	background-color: #d65764;
+}
+
+.continue {
+	letter-spacing: -1.5px;
+}
+
+.ok {
+	display: block;
+	margin: 60px auto;
+}
+
+button:hover {
+	background: #f96877;
+	color: #f5f5f5;
+}
+
+.more_button_container {
+	width: 30%;
+	display: block;
+	margin: 0 auto;
+}
+
+.missing {
+	width: 100%;
+	font-size: .7em;
+	margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 1000px) {
+	.more_button_container {
+		width: 70%;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.container {
+		width: 90%;
+	}
+	button {
+		background-color: #f96877;
+		color: white;
+		border: none;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	.container {
+		margin-top: 50px;
+	}
+	.more_button_container {
+		width: 90%;
+	}
+	.more_button_container button {
+		margin: 20px 0;
+	}
+}
+
+@media only screen and (max-width: 465px) {
+	input {
+		width: 90%;
+	}
+	.button_container {
+		width: 100%;
+	}
+}
+
+.hidden {
+	display: none;
+}
+
+.video {
+	width: 100%;
+	margin-top: 25px;
+}
+
+#text {
+	display: inline-block;
+	height: auto;
+}
+
+/* code for animated blinking cursor */
+
+.typed-cursor {
+	display: none;
+	opacity: 1;
+	font-weight: 100;
+	-webkit-animation: blink 1s infinite;
+	-moz-animation: blink 1s infinite;
+	-ms-animation: blink 1s infinite;
+	-o-animation: blink 1s infinite;
+	animation: blink 1s infinite;
+}
+
+@-keyframes blink {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes blink {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@-moz-keyframes blink {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@-ms-keyframes blink {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@-o-keyframes blink {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
